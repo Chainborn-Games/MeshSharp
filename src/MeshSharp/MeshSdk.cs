@@ -11,6 +11,7 @@ namespace MeshSharp;
 
 public class MeshSdk : IAsyncDisposable, IDisposable
 {
+    private static MeshSdk? _instance;
     private readonly NodeEmbeddingPlatform _platform;
     private readonly NodeEmbeddingThreadRuntime _runtime;
     private readonly MeshWalletFactory _walletFactory;
@@ -30,6 +31,9 @@ public class MeshSdk : IAsyncDisposable, IDisposable
 
     public static MeshSdk Create()
     {
+        if (_instance != null)
+            return _instance;
+        
         // Find the path to the libnode binary for the current platform.
         var baseDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
         var libNodePath = Path.Combine(baseDir, "runtimes", "osx-arm64", "native", "libnode.dylib");
@@ -43,7 +47,7 @@ public class MeshSdk : IAsyncDisposable, IDisposable
                 MainScript = "globalThis.require = require('module').createRequire(process.execPath);\n"
             });
 
-        return new(platform, runtime);
+        return _instance = new(platform, runtime);
     }
 
     public async Task<JSValue> ImportMeshSdkCoreModule()

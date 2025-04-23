@@ -4,5 +4,14 @@
         <PackageReference Include="Microsoft.JavaScript.NodeApi" Version="0.9.11"/>
         <PackageReference Include="Microsoft.JavaScript.NodeApi.Generator" Version="0.9.11"/>
     </ItemGroup>
-    
+
+    <ItemGroup>
+        <Content Include="package.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Pack>True</Pack>
+            <PackagePath>contentFiles\any\any\</PackagePath>
+        </Content>
+    </ItemGroup>
+
+
 </Project>

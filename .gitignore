@@ -2,5 +2,6 @@
 .idea
 obj
 bin
+dist
 node_modules
 *.DotSettings.user
