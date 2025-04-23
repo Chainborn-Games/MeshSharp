@@ -18,9 +18,11 @@ public class WalletBasicOperationsTests(MeshSdkFixture fixture) : IClassFixture<
     public async Task Can_Create_Wallet_And_Get_Addresses()
     {
         var key = await _sdk.Wallet.BrewAsync();
+        var provider = await _sdk.Providers.CreateOfflineProviderAsync();
 
         var wallet = await _sdk.Wallet.CreateAsync(new()
         {
+            Fetcher = provider,
             NetworkId = PreprodNetworkId,
             KeyType = MeshKeyType.Root,
             RootPrivateKeyBech32 = key

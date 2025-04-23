@@ -59,6 +59,11 @@ public class MeshSdk : IAsyncDisposable, IDisposable
         return await Runtime.ImportAsync("@meshsdk/core");
     }
     
+    public async Task<JSValue> ImportMeshSdkCoreCslModule()
+    {
+        return await Runtime.ImportAsync("@meshsdk/core-csl");
+    }
+    
     public void Dispose()
     {
         _runtime.Dispose();
