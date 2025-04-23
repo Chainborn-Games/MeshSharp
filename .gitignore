@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+obj
+bin
+node_modules
+*.DotSettings.user

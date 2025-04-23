@@ -1,0 +1,19 @@
+<Project>
+    <!-- Copy interop bundle as before (your target unchanged) -->
+
+    <!-- Ensure package.json is copied to out-dir -->
+    <ItemGroup>
+        <None Include="$(MSBuildThisFileDirectory)\package.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Pack>True</Pack>
+            <PackagePath>contentFiles\any\any\</PackagePath>
+        </None>
+        <!-- Optionally include package-lock.json in a similar way, if needed -->
+    </ItemGroup>
+
+    <!-- Run npm install in the out-dir, but only for executable projects, and only if package.json is present -->
+    <Target Name="MeshSharp_RunNpmInstall" AfterTargets="Build" Condition="Exists('$(OutDir)package.json') AND '$(OutputType)' == 'Exe'">
+        <Message Importance="High" Text="Running npm install in $(OutDir)" />
+        <Exec Command="npm install" WorkingDirectory="$(OutDir)" StandardOutputImportance="Low" StandardErrorImportance="High" />
+    </Target>
+</Project>

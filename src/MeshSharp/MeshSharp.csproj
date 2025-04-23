@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <PackageReference Include="Microsoft.JavaScript.LibNode" Version="20.1800.215"/>
+        <PackageReference Include="Microsoft.JavaScript.NodeApi" Version="0.9.11"/>
+        <PackageReference Include="Microsoft.JavaScript.NodeApi.Generator" Version="0.9.11"/>
+    </ItemGroup>
+    
+</Project>

@@ -1,0 +1,15 @@
+{
+  "name": "meshsharp-interop",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "@meshsdk/core": "^1.9.0-beta.37"
+  },
+  "devDependencies": {
+    "webpack": "^5.99.6",
+    "webpack-cli": "^6.0.1",
+    "typescript": "^5.8.3",
+    "ts-loader": "^9.5.2"
+  }
+}

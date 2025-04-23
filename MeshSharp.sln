@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{5557EA39-6CCC-4774-95FD-A66FBCC44FBF}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7B7D128C-80D4-424A-913D-15CEAC32FFE8}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshSharp", "src\MeshSharp\MeshSharp.csproj", "{BF5F8F9B-CA19-4A89-8FD3-E0DA8766AED3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CF0B75D8-2BA0-425F-9286-202D50C0EDBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshSharp.Tests", "test\MeshSharp.Tests\MeshSharp.Tests.csproj", "{7C9FFDA0-B6A7-4E2D-AACA-63846D3367A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshSharp.ConsoleApp", "src\MeshSharp.ConsoleApp\MeshSharp.ConsoleApp.csproj", "{B0A076CA-D956-4D9B-98F5-A800B07DF2B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF5F8F9B-CA19-4A89-8FD3-E0DA8766AED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF5F8F9B-CA19-4A89-8FD3-E0DA8766AED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF5F8F9B-CA19-4A89-8FD3-E0DA8766AED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF5F8F9B-CA19-4A89-8FD3-E0DA8766AED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C9FFDA0-B6A7-4E2D-AACA-63846D3367A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C9FFDA0-B6A7-4E2D-AACA-63846D3367A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C9FFDA0-B6A7-4E2D-AACA-63846D3367A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C9FFDA0-B6A7-4E2D-AACA-63846D3367A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A076CA-D956-4D9B-98F5-A800B07DF2B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A076CA-D956-4D9B-98F5-A800B07DF2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A076CA-D956-4D9B-98F5-A800B07DF2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A076CA-D956-4D9B-98F5-A800B07DF2B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF5F8F9B-CA19-4A89-8FD3-E0DA8766AED3} = {7B7D128C-80D4-424A-913D-15CEAC32FFE8}
+		{7C9FFDA0-B6A7-4E2D-AACA-63846D3367A7} = {CF0B75D8-2BA0-425F-9286-202D50C0EDBD}
+		{B0A076CA-D956-4D9B-98F5-A800B07DF2B7} = {7B7D128C-80D4-424A-913D-15CEAC32FFE8}
+	EndGlobalSection
+EndGlobal
